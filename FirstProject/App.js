@@ -236,4 +236,49 @@
 
 // // ------------- Displaying Button ----------------
 
-// import React
+import React, { Component } from 'react';
+import { Alert, View, Button } from 'react-native';
+
+export default class ButtonTest extends Component {
+  _onPressButton() {
+    Alert.alert('You tapped. . !');
+  }
+  render() {
+    return (
+      <View
+      style={{
+        flex:1,
+        flexDirection: 'column',
+        justifyContent: 'center'
+      }}
+      >
+        <View
+        style={{
+                  flex:1,
+                  flexDirection: 'column',
+                  justifyContent: 'center'
+                }}
+        >
+          <Button 
+          style = {{margin: 30}}
+          onPress={this._onPressButton}
+          title='Tap me'
+          />
+        </View>
+        <View
+        style={{
+                  flex:1,
+                  flexDirection: 'column',
+                  justifyContent: 'center'
+                }}
+        >
+          <Button 
+          style = {{margin: 30}}
+          onPress={this._onPressButton}
+          title='Tap me'
+          />
+        </View>
+      </View>
+    );
+  }
+}
